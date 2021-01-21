@@ -1,6 +1,6 @@
 # 10Opportunities
 
-
+The aim of this repository is to provide a first not graphic version of the interactive game "10 Opportunities to became no violente".
 
 
 Run it by typing 
