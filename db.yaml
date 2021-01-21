@@ -1,0 +1,78 @@
+- page: 1
+  msg: mi sembre che i miei vicini siano troppo allegri
+  parent: 0
+  level: S1
+  label: 1
+- page: 2  
+  msg: Prendo un flacone di tranquillanti
+  parent: 1 
+  level: S1_2
+  label: A
+- page: 6 
+  msg:  ma chi credono di essere quelli là  
+  parent: 1 
+  level:  S1_2 
+  label:  B }
+- page: 9 
+  msg:  Vado a chiedere di fare meno rumore  
+  parent: 1 
+  level:  S1_2 
+  label:  C
+- page: 4 
+  msg: Mi occorre uno stratagemma per afermare il rumore  
+  parent: 2 
+  level:  S1_3 
+  label: A1 
+- page: 5 
+  sg: di questi seccatori se ne deve occupare la polizia  
+  parent: 2 
+  level:  S1_3 
+  label: A1
+- page: 12
+  msg:  ci vorrebbe più coraggio  
+  parent:  4
+  level:  S1_4 
+  label:  soluzione  A1
+- page: 13
+  msg:  Richiedere alla polizia che si occupi di questo conflitto ...  
+  parent: 4 
+  level:  S1_4 
+  label:  soluzione A2
+- page: 
+  msg:    
+  parent:  
+  level:  
+  label: 
+- page: 
+  msg:    
+  parent:  
+  level:  
+  label: 
+- page: 
+  msg:    
+  parent:  
+  level:  
+  label: 
+- page: 
+  msg:    
+  parent:  
+  level:  
+  label: 
+- page: 
+  msg:    
+  parent:  
+  level:  
+  label: 
+- page: 
+  msg:    
+  parent:  
+  level:  
+  label: 
+- page: 
+  msg:    
+  parent:  
+  level:  
+  label: 
+
+
+  
