@@ -1,9 +1,11 @@
 # 10Opportunities
 
 
-lauch typing 
 
-   python3 main.py
+
+Run it by typing 
+
+    python3 main.py
 
 and follow the questions 
 
