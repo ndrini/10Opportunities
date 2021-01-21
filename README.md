@@ -11,5 +11,5 @@ and follow the questions
 
 
 ## Warning 
-Question and cases database are not implemented yet.
+Question and cases database are not implemented yet (just half of first situation has been inserted").
 
