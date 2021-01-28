@@ -1,48 +1,5 @@
-from db_dict import db
+from yaml import safe_load
 
-# db = [ # temp data store
-#     {"page": 1, 
-#      "msg": "mi sembre che i miei vicini siano troppo allegri",
-#      "parent": 0, 
-#      "level": "S1",
-#      "label": "1",
-#     },
-#     {"page": 2, 
-#      "msg": "Prendo un flacone di tranquillanti",
-#      "parent": 1, 
-#      "level": "S1_2",
-#      "label": "A"},
-#     {"page": 6, 
-#      "msg": "ma chi credono di essere quelli là", 
-#      "parent": 1, 
-#      "level": "S1_2",
-#      "label": "B"},
-#     {"page": 9, 
-#      "msg": "Vado a chiedere di fare meno rumore", 
-#      "parent": 1, 
-#      "level": "S1_2",
-#      "label": "C"},
-#     {"page": 4, 
-#      "msg":"Mi occorre uno stratagemma per afermare il rumore", 
-#      "parent": 2, 
-#      "level": "S1_3",
-#      "label":"A1"},
-#     {"page": 5, 
-#     "msg":"di questi seccatori se ne deve occupare la polizia", 
-#      "parent": 2, 
-#      "level": "S1_3",
-#      "label":"A1"},
-#     {"page":12,
-#      "msg": "ci vorrebbe più coraggio", 
-#      "parent":  4,
-#      "level": "S1_4",
-#      "label": "soluzione  A1"},
-#     {"page":13,
-#      "msg": "Richiedere alla polizia che si occupi di questo conflitto ...", 
-#      "parent": 4, 
-#      "level": "S1_4",
-#      "label": "soluzione A2"},
-#     ]
 ''' levels
 1 intro
 2 3 choices
@@ -93,6 +50,9 @@ class Match():
     childs_page_info = []   # list of str: number + msg 
     match_alive = True
 
+    with open(r"db.yaml") as f:
+        db = safe_load(f)
+
     def __init__(self, case_number, player) -> None:
         ''' adquire info from Session obj '''
         self.case_number = case_number      # TODO rename case_initial_page
@@ -117,10 +77,10 @@ class Match():
         else: 
             return
     
-    def pseudo_query(self, page_number) -> None:
+    def pseudo_query(self, page_number) -> list:
         ''' Show actual situation and possible next steps '''
         # select the options child of page page_number
-        for page in db: 
+        for page in self.db: 
             if page["parent"] == page_number:
                 self.childs.append(page)
             if page["page"] == page_number:
@@ -138,6 +98,9 @@ class Match():
         print("Le scelte possibili sono ")
         for m in self.childs_page_info: 
             print("\t", m)
+        
+        return self.childs_page_info
+
 
     def read_and_pass_answer(self) -> int:
         ''' '''
@@ -170,9 +133,11 @@ class Match():
             #     if manually_abort = "y":
             #           return None  
 
-s1 = Session("John")
-s1.play_all()
-print("Program End")
+
+if __name__ == "__main__":
+    s1 = Session("John")
+    s1.play_all()
+    print("Program End")
     
 
 # expertex 2, 6, 9 
