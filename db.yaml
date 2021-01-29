@@ -1,78 +1,140 @@
 - page: 1
-  msg: mi sembre che i miei vicini siano troppo allegri
+  msg: > 
+    1. Mi sembra che i miei vicini siano troppo allegri. 
+    'Tesoro, abbassa il volume'
+    'Ma non sono io, cara! Ci risiamo, sono i vicini!'
   parent: 0
   level: S1
   label: 1
+  choice: False
+  end: False
 - page: 2  
-  msg: Prendo un flacone di tranquillanti
+  msg: >
+    ...se ti trovassi in questa situazione quale di queste tre azioni 
+    del vostro protagonista sceglieresti?
   parent: 1 
   level: S1_2
   label: A
+  choice: True
+  end: False
+
+- page: 3  
+  msg: >
+    Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? 
+    Ecco fatto! E ora...
+  parent: 2 
+  level: S1_2
+  label: A
+  choice: True
+  end: False
 - page: 6 
   msg:  ma chi credono di essere quelli là  
-  parent: 1 
+  parent: 2 
   level:  S1_2 
-  label:  B }
+  label:  B 
+  choice: True
+  end: False
 - page: 9 
   msg:  Vado a chiedere di fare meno rumore  
-  parent: 1 
+  parent: 2 
   level:  S1_2 
   label:  C
+  choice: True
+  end: False
+
 - page: 4 
-  msg: Mi occorre uno stratagemma per afermare il rumore  
-  parent: 2 
+  msg: >
+    oohhhh! Va già meglio! ehm... non è vero cara?!
+
+    !?!?
+  parent: 3 
   level:  S1_3 
   label: A1 
+  choice: False
+  end: False
 - page: 5 
-  sg: di questi seccatori se ne deve occupare la polizia  
-  parent: 2 
+  msg: di questi seccatori se ne deve occupare la polizia  
+  parent: 3 
   level:  S1_3 
   label: A1
+  choice: False
+  end: False
 - page: 12
-  msg:  ci vorrebbe più coraggio  
+  msg:  >
+    Alt! Peccato, ci vorrebbe più coraggio per risolvere questo problema. 
+    Presentarsi e iniziare un dialogo con persone sconociute può rivelarsi 
+    positivo nei raporti con il vicinato.     
   parent:  4
   level:  S1_4 
   label:  soluzione  A1
+  choice: False
+  end: True
 - page: 13
   msg:  Richiedere alla polizia che si occupi di questo conflitto ...  
-  parent: 4 
+  parent: 5 
   level:  S1_4 
   label:  soluzione A2
-- page: 
-  msg:    
-  parent:  
-  level:  
-  label: 
-- page: 
-  msg:    
-  parent:  
-  level:  
-  label: 
-- page: 
-  msg:    
-  parent:  
-  level:  
-  label: 
-- page: 
-  msg:    
-  parent:  
-  level:  
-  label: 
-- page: 
-  msg:    
-  parent:  
-  level:  
-  label: 
-- page: 
-  msg:    
-  parent:  
-  level:  
-  label: 
-- page: 
-  msg:    
-  parent:  
-  level:  
-  label: 
+  choice: False
+  end: True
+
+- page: 7 
+  msg: Mi occorre uno stratagemma per afermare il rumore  
+  parent: 6 
+  level:  S1_3 
+  label: B1 
+  choice: False
+- page: 8 
+  msg: di questi seccatori se ne deve occupare la polizia  
+  parent: 6 
+  level:  S1_3 
+  label: B1
+  choice: False
+- page: 14
+  msg:  ci vorrebbe più coraggio  
+  parent:  7
+  level:  B1_4 
+  label:  soluzione  A1
+  choice: False
+- page: 15
+  msg:  Richiedere alla polizia che si occupi di questo conflitto ...  
+  parent: 8 
+  level:  S1_4 
+  label:  soluzione A2
+  choice: False
 
 
-  
+- page: 10 
+  msg: Mi occorre uno stratagemma per afermare il rumore  
+  parent: 9 
+  level:  S1_3 
+  label: B1 
+  choice: False
+- page: 11 
+  msg: di questi seccatori se ne deve occupare la polizia  
+  parent: 9 
+  level:  S1_3 
+  label: B1
+  choice: False
+- page: 16
+  msg: >
+    Alt!
+
+    Torna a pagina 1 e ricomincia a giocare!
+  parent: 10
+  level:  B1_4 
+  label:  soluzione  A1
+  choice: False
+- page: 17
+  msg: >
+    Soluzione 6 
+    Ben giocato!
+    Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.
+    Era molto semplice!
+    Continaua Cosí!
+    
+    Bravo! Hai gestito bene il conflitto!
+  parent: 11 
+  level:  S1_4 
+  label:  soluzione A2
+  choice: False
