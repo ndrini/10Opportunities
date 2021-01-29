@@ -1,8 +1,10 @@
 - page: 1
   msg: > 
     1. Mi sembra che i miei vicini siano troppo allegri. 
-    'Tesoro, abbassa il volume'
-    'Ma non sono io, cara! Ci risiamo, sono i vicini!'
+    
+    Male: 'Tesoro, abbassa il volume'
+    
+    Female: 'Ma non sono io, cara! Ci risiamo, sono i vicini!'
   parent: 0
   level: S1
   label: 1
@@ -138,3 +140,44 @@
   level:  S1_4 
   label:  soluzione A2
   choice: False
+  end: True
+
+# ------------------------------------------------------
+- page: 18
+  msg: > 
+    1. Mi sembra che i miei vicini siano troppo allegri. 
+    
+    Male: 'Tesoro, abbassa il volume'
+    
+    Female: 'Ma non sono io, cara! Ci risiamo, sono i vicini!'
+  parent: 0
+  level: S1
+  label: 1
+  choice: False
+  end: False
+- page: 19  
+  msg: >
+    ...se ti trovassi in questa situazione quale di queste tre azioni 
+    del vostro protagonista sceglieresti?
+  parent: 18 
+  level: S1_2
+  label: A
+  choice: True
+  end: False
+
+- page: 20  
+  msg: >
+    Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? 
+    Ecco fatto! E ora...
+  parent: 18 
+  level: S1_2
+  label: A
+  choice: True
+  end: False
+- page: 23 
+  msg:  ma chi credono di essere quelli là  
+  parent: 20 
+  level:  S1_2 
+  label:  B 
+  choice: True
+  end: False

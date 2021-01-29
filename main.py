@@ -15,14 +15,14 @@ di queste tre azioni del vostro protagonista sceglieresti?"
 
 class Session():
     ''' it collects the player name, boosts the game in each possible case '''
-    case_all = [1,20,30] # TODO: move to a dictionary  
+    case_all = [1, 18,] # TODO: move to a dictionary  
     game_over = False
 
     def __init__(self, player_name):
         self.player_name = player_name
 
     def play_all(self):
-        ''' cover one by one (no user chice) the possible cases '''
+        ''' cover one by one (no user chice) the 10 possible cases '''
         # TODO: allow the user to select the desired case
         #       (function case_all_shuffle or select) 
         while self.case_all and not self.game_over: 
@@ -54,7 +54,7 @@ class Match():
     # TODO: remove childs_page_number and user childs list
     childs_page_number = [] # list of integers of page 
     childs_page_info = []   # list of str: number + msg 
-    match_alive = True
+    # match_alive = True 
 
     with open(r"db.yaml") as f:
         db = safe_load(f)
@@ -69,37 +69,59 @@ class Match():
         # print("Hello, " + self.player_name + "!")
         print("Let's play the match case number " + 
             str(self.page) + ".")
+        # TODO: provide the title of the case or posticipate this questione  
         initial_check = input("Play 'P' or Abort 'A': ")
         next_pace = True
-        ## here Abort input 
         if initial_check == "P":
-            # for i in range(5):
-            #     print("play ...")
-            while self.match_alive and next_pace: 
-                
-                ## if :-response.choice == False --> pseudo query 
-                self.pseudo_query(self.page)
-
+            # while self.match_alive and next_pace: 
+            # go_on = True
+            while next_pace:
+                result = self.pseudo_query(self.page)
+                # while loop exit
+                if result[0] == "End":
+                    print("The case (this match) is over")
+                    # not necessary: self.match_alive = False
+                    return 
+                if result[0] == "go_on":
+                    next_pace = self.find_child(self.page)
+                    self.page = next_pace  # update page     
+                    continue
                 next_pace = self.read_and_pass_answer() 
                 self.page = next_pace  # update page
             return  
         else: 
             return
-    
+
+    def find_child(self, parent_page) -> int:
+        for page in self.db: 
+            if page["parent"] == parent_page:
+                return page["page"]
+
+
     def pseudo_query(self, page_number) -> list:
         ''' Show actual situation and possible next steps '''
         # select the options child of page page_number
 
         for page in self.db: 
-            if page["parent"] == page_number:
-                self.childs.append(page)
             if page["page"] == page_number:
                 self.parent_msg = page["msg"]
+                if page["end"] == True:
+                    # reached the last page
+                    print(self.parent_msg)
+                    return ["End"]
+                # connected choice not shown !!!
+                if page["choice"] == False:
+                    return ["go_on"]
+
+            if page["parent"] == page_number:
+                self.childs.append(page)
                 
         self.childs_page_number = [p["page"] for p in self.childs]
         ''' Show actual situation '''
         print("Your situation: ", self.parent_msg)
         ''' Show possible next steps '''
+
+
         # TODO:  nice_display_function
         self.childs_page_info = [str(p["page"]) + "  " + p["msg"] \
             for p in self.childs]
@@ -129,7 +151,7 @@ class Match():
                 # select a case to logout! 
                 self.history.append(selected_page) 
                 ''' Check if this is the last possible step '''
-                for choice in db:
+                for choice in self.db:
                     if choice["page"] == int(selected_page):
                         if choice["level"][-1] == str(4):  # ex. "level": "S1_4"
                             return None
