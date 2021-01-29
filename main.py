@@ -80,6 +80,7 @@ class Match():
     def pseudo_query(self, page_number) -> list:
         ''' Show actual situation and possible next steps '''
         # select the options child of page page_number
+
         for page in self.db: 
             if page["parent"] == page_number:
                 self.childs.append(page)
@@ -99,7 +100,7 @@ class Match():
         for m in self.childs_page_info: 
             print("\t", m)
         
-        return self.childs_page_info
+        return self.childs_page_number
 
 
     def read_and_pass_answer(self) -> int:
