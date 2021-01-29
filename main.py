@@ -29,6 +29,12 @@ class Session():
             # todo: ask for new match or game_over 
             m = Match(self.case_all[0], self.player_name)
             print("Playing", self.case_all[0])
+
+            # TODO: play_one should return 
+            #       "exit" -> exit game
+            #       "pass" -> pass to another case 
+            #       "stop" -> froze the game
+            #   
             m.play_one()
             # removed played case from list 
             self.case_all = self.case_all[1:]
@@ -53,16 +59,16 @@ class Match():
     with open(r"db.yaml") as f:
         db = safe_load(f)
 
-    def __init__(self, case_number, player) -> None:
+    def __init__(self, initial_page, player) -> None:
         ''' adquire info from Session obj '''
-        self.case_number = case_number      # TODO rename case_initial_page
+        self.page = initial_page      # TODO rename initial_page
         self.player_name = player
     
     def play_one(self) -> None:
         ''' '''
         # print("Hello, " + self.player_name + "!")
         print("Let's play the match case number " + 
-            str(self.case_number) + ".")
+            str(self.page) + ".")
         initial_check = input("Play 'P' or Abort 'A': ")
         next_pace = True
         ## here Abort input 
@@ -70,9 +76,12 @@ class Match():
             # for i in range(5):
             #     print("play ...")
             while self.match_alive and next_pace: 
-                self.pseudo_query(self.case_number)
+                
+                ## if :-response.choice == False --> pseudo query 
+                self.pseudo_query(self.page)
+
                 next_pace = self.read_and_pass_answer() 
-                self.case_number = next_pace  # update page
+                self.page = next_pace  # update page
             return  
         else: 
             return
@@ -140,24 +149,3 @@ if __name__ == "__main__":
     s1.play_all()
     print("Program End")
     
-
-# expertex 2, 6, 9 
-
-# def valid_user_input(x):
-#     try:
-#         
-#         return int(x) > 2
-#     except ValueError:
-#         return False
-
-# maximum_number_input = input("Maximum Number: ")  # raw_input not available py3
-
-# while valid_user_input(maximum_number_input):
-#     maximum_number_input = input("Maximum Number: ")
-#     print("You have successfully entered a valid number")
-
-# pseudo_query(history[-1]):
-
-
-
-
