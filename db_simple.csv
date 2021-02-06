@@ -1,0 +1,3 @@
+page,msg,parent,choice,end
+1,1. Mi sembra che,0,False,False
+2,...se ti trovassi,1,True,False
