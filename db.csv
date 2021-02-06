@@ -1,0 +1,328 @@
+page,case,parent,goto,level,label,choice,end,msg_pre,msg_actual,,,,,
+1,1,0,,,,False,False,Mi sembra che i miei vicini siano troppo allegri,"Vicini: Bom bom bom bom
+Uomo: 'Tesoro, abbassa il volume'
+Donna: 'Ma non sono io, cara! Ci risiamo, sono i vicini!'
+",,,,,
+2,1,1,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+3,1,2,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+4,1,3,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+5,1,3,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+6,1,2,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+7,1,6,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+8,1,6,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+9,1,2,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+10,1,9,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+11,1,9,,,,False,False,Uomo: suona il campanello 'State a vedere come si fa',"Uomo: 'Per cortesia, potreste fare un po' meno rumore? Non sentiamo nemmeno la TV di là!'
+Vicino: 'Ma certo! Scusate tanto'",,,,,
+12,1,4,1,,,False,False,,"Soluzione: Alt!  Peccato, ci vorrebbe un po' più di coraggio per risolvere questo problme. Presentasi e iniziare un dialogo con persone sconosiute può rivelarsi positivo nei rapporti di vicinato. ",,,,,0
+13,1,5,1,,,False,False,,"Soluzione: Alt!  Richiedere alla Polizia che si occupi di questo prolema è francamente sproporzionato per questa situazione. Puoi comporre benissimo il conflitto da solo, essendo più persuasivo!",,,,,0
+14,1,7,1,,,False,False,,Soluzione: Alt! Il tuo televisore non può comunicare al tuo posto! Andrea verso l'altro e spiegarsi è talmente più semplice...,,,,,0
+15,1,8,1,,,False,False,,Soluzione: Alt! Il tuo modo di comunicare ha più della bestia che dell'umano! Rimangono ancora molte cose da imparare.,,,,,0
+16,1,10,1,,,False,False,,Soluzione: Alt! Ci sei quasi. Un po' di diplomaziona ed un pizzico di cortesia e ci arriverai!,,,,,0
+17,1,11,,,,False,True,,"Soluzione 6     Ben giocato!     Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.     Era molto semplice!     Continaua Cosí!
+    Bravo! Hai gestito bene il conflitto!",,,,,0
+18,2,0,,,,False,False,Mi sembra che i miei nuovi colleghi pretendono troppo.,,,,,,
+19,2,18,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+20,2,19,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+21,2,20,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+22,2,20,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+23,2,19,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+24,2,23,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+25,2,23,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+26,2,19,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+27,2,26,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+28,2,26,,,,False,False,Uomo:,Uomo:,,,,,
+29,2,21,,,,False,False,,"Soluzione: Alt!  Richiedere alla Polizia che si occupi di questo prolema è francamente sproporzionato per questa situazione. Puoi comporre benissimo il conflitto da solo, essendo più persuasivo!",,,,,
+30,2,22,,,,False,False,,Soluzione: Alt!,,,,,
+31,2,24,,,,False,False,,Soluzione: Alt! Il tuo televisore non può comunicare al tuo posto! Andrea verso l'altro e spiegarsi è talmente più semplice...,,,,,
+32,2,25,,,,False,False,,Soluzione: Alt! Il tuo modo di comunicare ha più della bestia che dell'umano! Rimangono ancora molte cose da imparare.,,,,,
+33,2,27,,,,False,False,,Soluzione: Alt! Ci sei quasi. Un po' di diplomaziona ed un pizzico di cortesia e ci arriverai!,,,,,
+34,2,28,,,,False,True,,"Soluzione 6     Ben giocato!     Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.     Era molto semplice!     Continaua Cosí!
+    Bravo! Hai gestito bene il conflitto!",,,,,
+35,3,0,,,,,,mi sembra che si che si fischia la mia compagna.,,,,,,
+36,3,35,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+37,3,36,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+38,3,37,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+39,3,37,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+40,3,36,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+41,3,40,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+42,3,40,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+43,3,36,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+44,3,43,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+45,3,43,,,,False,False,Uomo:,Uomo:,,,,,
+46,3,38,,,,False,False,,"Soluzione: Alt!  Richiedere alla Polizia che si occupi di questo prolema è francamente sproporzionato per questa situazione. Puoi comporre benissimo il conflitto da solo, essendo più persuasivo!",,,,,
+47,3,39,,,,False,False,,Soluzione: Alt!,,,,,
+48,3,41,,,,False,False,,Soluzione: Alt! Il tuo televisore non può comunicare al tuo posto! Andrea verso l'altro e spiegarsi è talmente più semplice...,,,,,
+49,3,42,,,,False,False,,Soluzione: Alt! Il tuo modo di comunicare ha più della bestia che dell'umano! Rimangono ancora molte cose da imparare.,,,,,
+50,3,44,,,,False,False,,Soluzione: Alt! Ci sei quasi. Un po' di diplomaziona ed un pizzico di cortesia e ci arriverai!,,,,,
+51,3,45,,,,False,True,,"Soluzione 6     Ben giocato!     Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.     Era molto semplice!     Continaua Cosí!
+    Bravo! Hai gestito bene il conflitto!",,,,,
+52,4,0,,,,,,Mi sembra che il mio parrucchiere abbia due mani sinistre.,,,,,,
+53,4,52,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+54,4,53,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+55,4,54,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+56,4,54,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+57,4,53,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+58,4,57,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+59,4,57,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+60,4,53,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+61,4,60,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+62,4,60,,,,False,False,Uomo:,Uomo:,,,,,
+63,4,55,,,,False,True,,Soluzione: Ben giocato!  Perchè no? Non lasciarsi prendere in giro e imporsi è una attitudine nonviolenta! Controlla bene le tue parole e utilizza consapevolemnte la tua combattività!,,,,,
+64,4,56,52,,,False,False,,Soluzione: Alt! Peccato! Non riuscire ad imporsi per evitare il conflitto non è una attitudine nonviolenta. Prendi fiducia in te stesso!,,,,,
+65,4,58,52,,,False,False,,Soluzione: Alt! Attenzione! Vedi bene che così non risolvi il problema. Sfogati su qualcos'altro piuttosto che su qualcuno più debole di te! ,,,,,
+66,4,59,52,,,False,False,,"Soluzione: Alt! Prendi questo parrucchiere per un essere inferiore? Non si tei spiegato bene esercitando così una forma di violenza, anche se non fisica. Ed è ancora inefficace perchè non hai ottenuto ciò che volevi!",,,,,
+67,4,61,,,,False,True,,"Soluzione: Ben giocato! C'è stata un po' di incompresione iniziale, ma alla fine tutto si è risolto!",,,,,
+68,4,62,,,,False,True,,"Soluzione: Ben giocato! Hai rischiato, ma lal fine sei soddisfatto. Il dominio di sé è una delle chiavi dell'atteggiamento nonviolento. 
+Bravo! Hai gestito bene il conflitto!",,,,,
+69,5,0,,,,,,mi sembra che la mia cagnetta Kiki voglio fare i suoi bisognini in tranquillità,"Ragazzo 1: ..Caspita! Per fortuna questo cancello era aperto!  
+
+Ragazzo 2: già chi si aspettava un acquazzone simile!",,,,,
+70,5,69,,,,,,Se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,,
+71,5,70,,,,,,"Proprietario: Sì, sì, buona Kiki! Li ho visti!
+
+Beh, che si rifugino qui quando piove non è poi così grave!
+","Ragazzo 1: Ehilà, capo! Disturbiamo? 
+
+Ragazzo 2: ..tempo da lupi, eh?
+
+Proprietario: Ma ci mancherebbe comodi comodi ragazzi!
+",,,,,
+72,5,70,,,,,,"Proprietario:
+Sbrigati Kiki, altrimenti ti lascio qui con questi bulli, sai?
+",,,,,,
+73,5,71,,,,,,Dai vieni kiki non possono capire il nostro rapporto.,"Ragazzo 1: Ma che fa? È impazzito? Non lo tiri così!
+Ragazzo 2: Come lo tratta quel povero animale?!
+Proprietario: Non dargli retta Kiki, lo sai che lo faccio per te, vero?  ",,,,,
+74,5,,,,,,,,,,,,,
+75,5,70,,,,,,"Proprietario:
+Ancora intrusi nel mio cortile? Ma allora è un vizio!
+",,,,,,
+76,5,75,,,,,,"Proprietario:
+Questi proliferano come zanzare!","Proprietario:
+Ne ho le tasche piene! Se ne occuperanno i vigili di voi! 
+
+Ragazzo 1: Ma che fa? Ce ne andiamo non appena spiove! 
+Ragazzo 2: oh, be'! Che chiami chi vuole. Io da qui non mi schiodo!  Vai alla soluzione. ",,,,,
+77,5,75,,,,,,"Proprietario:
+Comincio ad avere Paura! Andiamo Kiki, farai i tuoi bisogni in casa!","Proprietario:
+Resisti Kiki, non fartela addosso!
+Ragazzo 1: Ma che gli prende a quello? 
+Ragazzo 2: Boh! Deve essere un po' fuori...",,,,,
+78,5,71,,,,,,Vai alla soluzione,"Soluzione: Ben giocato! Hai centrato il problema. Per lo meno hai capito che resteranno qui solo fino alla durata della pioggia! 
+
+Bravo! Hai gestito bene il conflitto!",,,,,
+79,5,73,69,,,,True,,"Soluzione: Alt!
+
+Apriti un po' di più al mondo esterno; essere nonviolenti non è fare per forza orecchie da mercante o passare oltre per evitare il confronto. ",,,,,
+80,5,,69,,,,False,,"Soluzione: Alt!  Non hai l'impressione di scomporti un po' troppo?  Occorre sapere interpretare i commenti e le battute, atrimenti Kiki rischia di nuovo di essere vittima dei tuoi umori. ",,,,,
+81,5,,69,,,,False,,"Soluzione: Alt!
+ Complimenti! Prendi il cellulare e chimai la polizia? Ci vai giù pesante! Avresti potuto almeno ascolatare prima le loro ragioni, no?",,,,,
+82,5,77,69,,,,False,,"Soluzione: Alt!
+I tuoi timori non sermbrano fondati. Sei ti preoccupi sempre di tutto finirai per ammalarti!",,,,,
+83,6,0,,,,,,Mi sembra che mio figlio si spinga agli estremi,,,,,,
+84,6,83,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+85,6,84,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+86,6,85,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+87,6,85,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+88,6,84,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+89,6,88,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+90,6,88,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+91,6,84,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+92,6,91,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+93,6,91,,,,False,False,Uomo:,Uomo:,,,,,
+94,6,86,,,,False,False,,"Soluzione: Alt!  Richiedere alla Polizia che si occupi di questo prolema è francamente sproporzionato per questa situazione. Puoi comporre benissimo il conflitto da solo, essendo più persuasivo!",,,,,
+95,6,87,,,,False,False,,Soluzione: Alt!,,,,,
+96,6,89,,,,False,False,,Soluzione: Alt! Il tuo televisore non può comunicare al tuo posto! Andrea verso l'altro e spiegarsi è talmente più semplice...,,,,,
+97,6,90,,,,False,False,,Soluzione: Alt! Il tuo modo di comunicare ha più della bestia che dell'umano! Rimangono ancora molte cose da imparare.,,,,,
+98,6,92,,,,False,False,,Soluzione: Alt! Ci sei quasi. Un po' di diplomaziona ed un pizzico di cortesia e ci arriverai!,,,,,
+99,6,93,,,,False,True,,"Soluzione 6     Ben giocato!     Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.     Era molto semplice!     Continaua Cosí!
+    Bravo! Hai gestito bene il conflitto!",,,,,
+100,,0,,7,mi sembra che si siano sporcati di nafta le mie vacanze,,,,,,,,,
+101,,100,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+102,,101,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+103,,102,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+104,,102,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+105,,101,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+106,,105,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+107,,105,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+108,,101,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+109,,108,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+110,,108,,,,False,False,Uomo:,Uomo:,,,,,
+111,,103,,,,False,False,,"Soluzione: Alt!  Richiedere alla Polizia che si occupi di questo prolema è francamente sproporzionato per questa situazione. Puoi comporre benissimo il conflitto da solo, essendo più persuasivo!",,,,,
+112,,104,,,,False,False,,Soluzione: Alt!,,,,,
+113,,106,,,,False,False,,Soluzione: Alt! Il tuo televisore non può comunicare al tuo posto! Andrea verso l'altro e spiegarsi è talmente più semplice...,,,,,
+114,,107,,,,False,False,,Soluzione: Alt! Il tuo modo di comunicare ha più della bestia che dell'umano! Rimangono ancora molte cose da imparare.,,,,,
+115,,109,,,,False,False,,Soluzione: Alt! Ci sei quasi. Un po' di diplomaziona ed un pizzico di cortesia e ci arriverai!,,,,,
+116,,110,,,,False,True,,"Soluzione 6     Ben giocato!     Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.     Era molto semplice!     Continaua Cosí!
+    Bravo! Hai gestito bene il conflitto!",,,,,
+117,8,0,,,,,,   mi sembra che mia figlia sia una persona che non presta volentieri  le sue cose,,,,,,
+118,,117,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+119,,118,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+120,,119,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+121,,119,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+122,,118,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+123,,122,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+124,,122,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+125,,118,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+126,,125,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+127,,125,,,,False,False,Uomo:,Uomo:,,,,,
+128,,120,,,,False,False,,"Soluzione: Alt!  Richiedere alla Polizia che si occupi di questo prolema è francamente sproporzionato per questa situazione. Puoi comporre benissimo il conflitto da solo, essendo più persuasivo!",,,,,
+129,,121,,,,False,False,,Soluzione: Alt!,,,,,
+130,,123,,,,False,False,,Soluzione: Alt! Il tuo televisore non può comunicare al tuo posto! Andrea verso l'altro e spiegarsi è talmente più semplice...,,,,,
+131,,124,,,,False,False,,Soluzione: Alt! Il tuo modo di comunicare ha più della bestia che dell'umano! Rimangono ancora molte cose da imparare.,,,,,
+132,,126,,,,False,False,,Soluzione: Alt! Ci sei quasi. Un po' di diplomaziona ed un pizzico di cortesia e ci arriverai!,,,,,
+133,,127,,,,False,True,,"Soluzione 6     Ben giocato!     Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.     Era molto semplice!     Continaua Cosí!
+    Bravo! Hai gestito bene il conflitto!",,,,,
+134,9,0,,,,,,mi sembra che abbiano tamponato Martina,,,,,,
+135,9,134,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+136,9,135,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+137,9,136,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+138,9,136,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+139,9,135,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+140,9,139,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+141,9,139,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+142,9,135,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+143,9,142,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+144,9,142,,,,False,False,Uomo:,Uomo:,,,,,
+145,9,137,,,,False,False,,"Soluzione: Alt!  Richiedere alla Polizia che si occupi di questo prolema è francamente sproporzionato per questa situazione. Puoi comporre benissimo il conflitto da solo, essendo più persuasivo!",,,,,
+146,9,138,,,,False,False,,Soluzione: Alt!,,,,,
+147,9,140,,,,False,False,,Soluzione: Alt! Il tuo televisore non può comunicare al tuo posto! Andrea verso l'altro e spiegarsi è talmente più semplice...,,,,,
+148,9,141,,,,False,False,,Soluzione: Alt! Il tuo modo di comunicare ha più della bestia che dell'umano! Rimangono ancora molte cose da imparare.,,,,,
+149,9,143,,,,False,False,,Soluzione: Alt! Ci sei quasi. Un po' di diplomaziona ed un pizzico di cortesia e ci arriverai!,,,,,
+150,9,144,,,,False,True,,"Soluzione 6     Ben giocato!     Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.     Era molto semplice!     Continaua Cosí!
+    Bravo! Hai gestito bene il conflitto!",,,,,
+151,10,0,,,,,,mi sembra che Imiei allievi litigano per pezzi,,,,,,
+152,10,151,,,,True,False,,...se ti trovassi in questa situazione quale di queste tre azioni del nostro protagonista sceglieresti?,,,,,
+153,10,152,,,,True,False,Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'?',...ora scegli una delle due opzioni qui sotto: ,,,,,
+154,10,153,,,,False,False,"Uomo: 'Prendo un flacone di tranquillanti... ehm... ne vuoi un po'? ' 
+Uomo: 'Mi occorre uno stratagemma per fermare questo rumore'","Uomo: si tappa le orecchie con 2 cuscini e dice '  oohhhh! Va già meglio! ehm... non è vero cara?!
+Donna: ' !?!?'",,,,,
+155,10,153,,,,False,False,"Uomo: ingoia una manciata di pillole. 'Ecco fatto'
+Uomo: ' di questi seccatori se ne deve occupare la polizia'","Telefono: 'Pronto, polizia! Deve fare una denuncia?'
+Uomo: ' Pronto! Certo che voglio fare una denuncia! Dica, lo sente questo rumore?' 
+Donna: 'Ehm...'",,,,,
+156,10,152,,,,True,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! ",...ora scegli una delle due opzioni qui sotto: ,,,,,
+157,10,156,,,,False,False,"Uomo: '..ma..ma chi credono di essere quelli là ?!' 
+Donna: '..Già! 
+Uomo: 'Farò più rumore di loro con il mio megatelevisore""",Uomo: 'Tiè! Beccatevi questo do di petto! Tiè! Tiè!',,,,,
+158,10,156,,,,False,False,"Uomo: ' .. Ma ora vedranno chi sono io! Eh! Eh!' 
+Donna: 'Che voui fare caro?'
+Uomo: ' Urlerò e batterò i pugli sul muro per fargli capire che devono smettere!'",Uomo: batte furioso alla parete  '.. Insomma! La volete finire di fare fumore! Basta!!' ,,,,,
+159,10,152,,,,True,False,Uomo: '..Vado a chiedergli di fare meno rumore',...ora scegli una delle due opzioni qui sotto: ,,,,,
+160,10,159,,,,False,False,"Uomo: '..Vado a chiedergli di fare meno rumore' 
+Uomo: ' Mi mostreró aggressivo e gli ordinerò di smettere!'","Uomo: 'Insomma giovanotto! Questo condominio non è mica una discoteca!'
+Vicino: 'Che... non sento!'",,,,,
+161,10,159,,,,False,False,Uomo:,Uomo:,,,,,
+162,10,154,,,,False,False,,"Soluzione: Alt!  Richiedere alla Polizia che si occupi di questo prolema è francamente sproporzionato per questa situazione. Puoi comporre benissimo il conflitto da solo, essendo più persuasivo!",,,,,
+163,10,155,,,,False,False,,Soluzione: Alt!,,,,,
+164,10,157,,,,False,False,,Soluzione: Alt! Il tuo televisore non può comunicare al tuo posto! Andrea verso l'altro e spiegarsi è talmente più semplice...,,,,,
+165,10,158,,,,False,False,,Soluzione: Alt! Il tuo modo di comunicare ha più della bestia che dell'umano! Rimangono ancora molte cose da imparare.,,,,,
+166,10,160,,,,False,False,,Soluzione: Alt! Ci sei quasi. Un po' di diplomaziona ed un pizzico di cortesia e ci arriverai!,,,,,
+167,10,161,,,,False,True,,"Soluzione 6     Ben giocato!     Hai trovato la soluzione per rimanere in buoni rapporti
+    con i tuoi vicini.     Era molto semplice!     Continaua Cosí!
+    Bravo! Hai gestito bene il conflitto!",,,,,
