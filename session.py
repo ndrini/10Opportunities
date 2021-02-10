@@ -31,5 +31,5 @@ class Session():
             if game_over_declar == "y":
                 self.game_over = True
         if not self.case_all: 
-            print("All possible cases Completed!") 
+            print("\n *** All possible cases Completed! *** ") 
 
