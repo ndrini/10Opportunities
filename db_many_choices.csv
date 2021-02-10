@@ -1,6 +1,6 @@
-page,case,parent,goto,level,label,choice,end,msg_pre,msg_actual,,,,,
-1,1,0,,,,False,False,"pre page 1 Vicini: Bom ","post page 1",,,,
-2,1,1,,,,False,False,,...se ti trovassi,,,,,
-3,1,2,,,,False,False, page 3 pre, page 3 post,,,,,
-4,1,3,,,True,False,False, page 4 pre, page 4 post,,,,,
+page,case,parent,goto,level,label,choice,end,msg_pre,msg_actual
+1,1,0,,,,False,False,"pre page 1 Vicini: Bom ","post page 1"
+2,1,1,,,,False,False,,...se ti trovassi
+3,1,2,,,,False,False, page 3 pre, page 3 post
+4,1,3,,,True,False,False, page 4 pre, page 4 post
 

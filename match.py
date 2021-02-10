@@ -110,23 +110,7 @@ class Match():
                 print("This is a valid choice!")  # , good_choice)
                 # select a case to logout!
                 self.history.append(selected_page)
-                ''' Check if this is the last possible step '''
-                # necessary here?!?!?
-
-                # for choice in self.db:
-                #     if choice["page"] == int(selected_page):
-                #         # ex. "level": "S1_4"
-                #         if choice["level"][-1] == str(4):
-                #             return None
-                # self.childs = []
-                # self.childs_page_number = []
                 return int(selected_page)
-            # TODO: explicit abort option
-            # else:
-            #     # manually Abort
-            #     manually_abort = input ("do you want to exit?")
-            #     if manually_abort = "y":
-            #           return None
 
     def play_one(self) -> None:
         ''' Match develpment based on a specific case'''
@@ -144,22 +128,43 @@ class Match():
         if initial_check == 'p':
             # TODO: insert Abort for the match
             while not self.actual_page_info['actual_page']['end']:
+                # todo: simplify with
+                #     choice = self.actual_page_info['actual_page']['choice']
+                #     msg_pre = self.actual_page_info['actual_page']['msg_pre'])
 
                 # 20.2 avoid title info duplication
                 # if not (self.page == 1):
                 if not (self.page in
                         [i['page'] for i in self.involved_pages(0)['childs']]):
-                    print(self.actual_page_info['actual_page']['msg_pre'])
+                    print(separator,
+                          self.actual_page_info['actual_page']['msg_pre'])
 
                 # 20.4 avoid user input if linked page
                 if not self.actual_page_info['actual_page']['choice']:
-                    print(self.actual_page_info['actual_page']['msg_actual'])
-                    print(self.actual_page_info['childs'][0]['msg_pre'])
-                    # update actual page
-                    self.page = self.actual_page_info['childs'][0]['page']
-                    self.actual_page_info = self.involved_pages(self.page)
-                    sleep(1)
-                    print(self.actual_page_info['actual_page']['msg_actual'])
+                    print(separator,
+                          self.actual_page_info['actual_page']['msg_actual'])
+
+                    if self.actual_page_info['childs']:
+                        print(self.actual_page_info['childs'][0]['msg_pre'])
+                        # update actual page
+                        self.page = self.actual_page_info['childs'][0]['page']
+                        self.actual_page_info = self.involved_pages(self.page)
+                        sleep(1)
+                        print(
+                            self.actual_page_info['actual_page']['msg_actual'])
+
+                    if self.actual_page_info['actual_page']['goto']:
+                        print(
+                            self.actual_page_info['actual_page']['msg_actual'])
+                        sleep(2)
+                        self.actual_page_info = self.involved_pages(
+                            self.actual_page_info['actual_page']['goto']
+                        )
+                        self.page == self.\
+                            actual_page_info['actual_page']['goto']
+
+                    # BUG do not check for end==True
+
                     continue
                 # or allow the choice
                 else:
@@ -167,18 +172,6 @@ class Match():
                     print(" **** Possibilities")
                     for p in self.actual_page_info['childs']:
                         print('choice: ', p['page'], '->', p['msg_pre'])
-
-                # MOVE
-                # result = self.pseudo_query(self.page)
-                # # while loop exit
-                # if result[0] == "End":
-                #     print("The case (this match) is over")
-                #     # not necessary: self.match_alive = False
-                #     return
-                # if result[0] == "go_on":
-                #     next_pace = self.find_only_child(self.page)
-                #     self.page = next_pace  # update page
-                #     continue
 
                     # update page
                     self.page = self.read_and_pass_answer()
@@ -192,6 +185,8 @@ class Match():
 
                     # 20.8 update page and continue
                     self.actual_page_info = self.involved_pages(self.page)
+                    # self.page already updated
+
                     sleep(1)
 
                     # go to check

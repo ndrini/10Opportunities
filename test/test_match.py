@@ -5,13 +5,18 @@ from match import Match
 def test_match_case_1(monkeypatch):
     s = main.Session('Barbara', 'db.csv')
     # create monkeypatched input
-    bot_answers = ["P", "9", "11", "y"]   # ok
-    # bot_answers = ["P", "6", "8", "9", "11", "y"]  # no!
-
+    bot_answers = ["P", "9", "11", "y"] 
     def bot_response(self):
         return bot_answers.pop(0)
     monkeypatch.setattr('builtins.input', bot_response)
+    s.play_all()
 
+def test_match_case_2(monkeypatch):
+    s = main.Session('Bob', 'db.csv')
+    bot_answers = ["P", "6", "8", "9", "11", "y"]  
+    def bot_response(self):
+        return bot_answers.pop(0)
+    monkeypatch.setattr('builtins.input', bot_response)
     s.play_all()
 
 
@@ -27,13 +32,13 @@ def test_involved_pages():
     assert query['childs'][2]['page'] == 9
 
 
-def test_many_choices(monkeypatch):
-    m = Match(1, 'Lily', 'db_many_choices.csv')
-    # create monkeypatched input
-    bot_answers = ["p"]   # ok
+# def test_many_choices(monkeypatch):
+#     m = Match(1, 'Lily', 'db_many_choices.csv')
+#     # create monkeypatched input
+#     bot_answers = ["p", 'y']   # ok
 
-    def bot_response(self):
-        return bot_answers.pop(0)
-        
-    monkeypatch.setattr('builtins.input', bot_response)
-    m.play_one()
+#     def bot_response(self):
+#         return bot_answers.pop(0)
+
+#     monkeypatch.setattr('builtins.input', bot_response)
+#     m.play_one()
