@@ -1,6 +1,7 @@
 import os
 import csv
 
+separator = '\n'*2 + '_____' + '\n'
 
 def custom_path(script_dir, file_name) -> str:
     parent_dir = os.path.split(script_dir)[0]

@@ -1,18 +1,20 @@
 import main
 from match import Match
 
-# def test_match_case_1(monkeypatch):
-#     s = main.Session("Barbara")
+def test_match_case_1(monkeypatch):
+    s = main.Session("Barbara")
 
-#     # create monkeypatched input
-#     bot_answers = ["P", "4", "11"]
+    # create monkeypatched input
 
-#     def bot_response(self):
-#         return bot_answers.pop(0)
+    bot_answers = ["P", "9", "11", "y" ]   # ok
+    # bot_answers = ["P", "6", "8", "9", "11", "y"]  # no!
 
-#     monkeypatch.setattr('builtins.input', bot_response)
+    def bot_response(self):
+        return bot_answers.pop(0)
 
-#     s.play_all()
+    monkeypatch.setattr('builtins.input', bot_response)
+
+    s.play_all()
 
 
 def test_involved_pages():

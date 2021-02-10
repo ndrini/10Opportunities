@@ -1,5 +1,6 @@
-from usefull import read_db
+from usefull import read_db, separator
 from time import sleep
+
 
 choice_generic_text = "se ti trovassi in questa situazione quale \
 di queste tre azioni del vostro protagonista sceglieresti?"
@@ -12,7 +13,7 @@ class Match():
     # TODO: remove childs_page_number and user childs list
     childs_page_number = []  # list of integers of page
     childs_page_info = []   # list of str: number + msg
-    actual_page_info = {} 
+    actual_page_info = {}
 
     # with open(r"db.yaml") as f:
     #     db = safe_load(f)
@@ -24,7 +25,8 @@ class Match():
         self.player_name = player
 
     def involved_pages(self, actual_page_number) -> dict:
-        ''' return a dict with: 
+        ''' return a dict with necessary info to
+            have a choice: 
             'actual_page': actual_page_obj,
             'childs': [children_page_objs] '''
         result = {'childs': []}
@@ -83,24 +85,30 @@ class Match():
         return self.childs_page_number
 
     def read_and_pass_answer(self) -> int:
-        ''' '''
-        # selected_page = input(t("make your choice"))
+        ''' Return user valid selection, based on available choices 
+            depending on the actual page
+        '''
         good_choice = False
         while not good_choice:
-            selected_page = input("Scrivi la tua scelta ")  # type str
-            if not selected_page:
-                selected_page = "0"
-            print("selected_page: ", selected_page)
-            print("good_choice: ", good_choice)
+            selected_page = input(
+                "Scrivi la tua scelta or 'exit' to abort ")  # type str
+            # abort match
+            if selected_page == 'exit':
+                return None
+            print("You selected page number ", selected_page)
 
-            # if (selected_page in child_page_number) or (selected_page == "e"):
-            
-            if (int(selected_page) in 
-                [i['page'] for i in self.actual_page_info['childs']]):
+            # prevent NameError in case of no choice at all or ValueError
+            try:
+                int(selected_page)
+            except:
+                print(separator, "NOT valid choice!")
+                continue
 
-            # if (int(selected_page) in self.childs_page_number):
+            # 20. assess the user's choice
+            if (int(selected_page) in
+                    [i['page'] for i in self.actual_page_info['childs']]):
                 good_choice = True
-                print("good_choice: ", good_choice)
+                print("This is a valid choice!")  # , good_choice)
                 # select a case to logout!
                 self.history.append(selected_page)
                 ''' Check if this is the last possible step '''
@@ -122,51 +130,46 @@ class Match():
             #           return None
 
     def play_one(self) -> None:
-        ''' '''
-
-        # 10. user welcome and introduction
-        # print("Hello, " + self.player_name + "!")
+        ''' Match develpment based on a specific case'''
+        # 10. User welcome and introduction
+        # print("Hello again, " + self.player_name + "!")
         print("\nSTART: Let's play the match case number " +
               str(self.page) + ".")
         self.actual_page_info = self.involved_pages(self.page)
-        print (self.actual_page_info)
-        print("\n\n The case Title is: ",
+        print("\n\n The case title is: ",
               self.actual_page_info['actual_page']['msg_pre'])
+        initial_check = input(
+            "Play 'P' or any other char to Abort: ").lower()
 
-        initial_check = input("Play 'P' or Abort 'A': ")
-        # next_pace = True
-        if initial_check == "P":
-            # TODO: insert Abort for the match 
+        # 20. Play the match
+        if initial_check == 'p':
+            # TODO: insert Abort for the match
             while not self.actual_page_info['actual_page']['end']:
-                
-                if not (self.page == 1):
+
+                # 20.2 avoid title info duplication
+                # if not (self.page == 1):
+                if not (self.page in
+                        [i['page'] for i in self.involved_pages(0)['childs']]):
                     print(self.actual_page_info['actual_page']['msg_pre'])
 
-                if not self.actual_page_info['actual_page']['choice']: 
+                # 20.4 avoid user input if linked page
+                if not self.actual_page_info['actual_page']['choice']:
                     print(self.actual_page_info['actual_page']['msg_actual'])
                     print(self.actual_page_info['childs'][0]['msg_pre'])
-
-                    # print("new page number", actual_page_info['childs'][0]['page'])
+                    # update actual page
                     self.page = self.actual_page_info['childs'][0]['page']
-                    # print ("self.page ", self.page )
                     self.actual_page_info = self.involved_pages(self.page)
-                    # print(actual_page_info['actual_page']['page'])
                     sleep(1)
                     print(self.actual_page_info['actual_page']['msg_actual'])
-                    
-                    continue                    
+                    continue
+                # or allow the choice
                 else:
                     # print all children possibilities
-
                     print(" **** Possibilities")
-                    #  it should be necessary
-                    # print(choice_generic_text)
-
                     for p in self.actual_page_info['childs']:
                         print('choice: ', p['page'], '->', p['msg_pre'])
 
-
-
+                # MOVE
                 # result = self.pseudo_query(self.page)
                 # # while loop exit
                 # if result[0] == "End":
@@ -177,14 +180,33 @@ class Match():
                 #     next_pace = self.find_only_child(self.page)
                 #     self.page = next_pace  # update page
                 #     continue
-                
+
                     # update page
                     self.page = self.read_and_pass_answer()
-                    # last page check      
+                    # last page check
                     if self.page == None:
+                        print(separator, "The case (this match) is over")
+                        print('The path has been: \n')
+                        for n in self.history:
+                            print(n, end=" ")
                         return
+
+                    # 20.8 update page and continue
                     self.actual_page_info = self.involved_pages(self.page)
                     sleep(1)
+
+                    # go to check
+                    if self.actual_page_info['actual_page']['goto']:
+                        print(
+                            self.actual_page_info['actual_page']['msg_actual'])
+                        sleep(2)
+                        self.actual_page_info = self.involved_pages(
+                            self.actual_page_info['actual_page']['goto']
+                        )
+                        self.page == self.\
+                            actual_page_info['actual_page']['goto']
+
             return
+        # 30. or exit this match (and go back to session for another case)
         else:
             return

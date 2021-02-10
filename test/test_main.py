@@ -1,8 +1,7 @@
 import pytest
-import main
+from match import Match
 
-# test_session = main.Session("Bot")
-test_match = main.Match(1, "Bot")
+test_match = Match(1, "Bot")
 
 '''
 TODO: 
@@ -14,22 +13,24 @@ create moneypatch for allowing multiple case tests
 #     print("childs_page_number_setup")
 #     test_match.childs_page_number = [456]
 
+
 def test_data_fix(monkeypatch):
-    def substitution(): 
+    def substitution():
         return [456]
-    
+
     monkeypatch.setattr('main.Match.childs_page_number', substitution)
     # monkeypatch.setattr('Match.childs_page_number', substitution)
 
-    print ("---> test_match.childs_page_number ",
-    test_match.childs_page_number )
+    print("---> test_match.childs_page_number ",
+          test_match.childs_page_number)
 
     assert test_match.pseudo_query(2) == [3, 6, 9]
 
+
 def test_data_fix_2():
-# def test_data_fix_2(childs_page_number_setup):
-    print ("test_match.childs_page_number ",
-    test_match.childs_page_number )
+    # def test_data_fix_2(childs_page_number_setup):
+    print("test_match.childs_page_number ",
+          test_match.childs_page_number)
     assert test_match.pseudo_query(1)[-1] == 2
 
 # def test_data_dinamic():
@@ -47,7 +48,7 @@ def test_data_fix_2():
 #         (4, [12]),
 #         (5, [13]),
 #     ]
-# @pytest.mark.parametrize('page,out', data) 
+# @pytest.mark.parametrize('page,out', data)
 # def test_data_by_pattern(page, out):
 #     # print("ciao")
 #     # print(test_match.db)
