@@ -15,14 +15,13 @@ class Match():
     childs_page_info = []   # list of str: number + msg
     actual_page_info = {}
 
-    # with open(r"db.yaml") as f:
-    #     db = safe_load(f)
-    db = read_db('db.csv')
-
-    def __init__(self, initial_page, player) -> None:
+    def __init__(self, initial_page, player, db) -> None:
         ''' adquire info from Session obj '''
         self.page = initial_page      # TODO rename initial_page
         self.player_name = player
+        # with open(r"db.yaml") as f:
+        #     db = safe_load(f)
+        self.db = read_db(db)
 
     def involved_pages(self, actual_page_number) -> dict:
         ''' return a dict with necessary info to

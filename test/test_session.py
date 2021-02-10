@@ -2,7 +2,7 @@ import main
 
 
 def test_session_abort(monkeypatch):
-    s = main.Session("Alan")
+    s = main.Session("Alan", 'db.csv')
 
     # create monkeypatched input
     bot_answers = ["A", "y"]

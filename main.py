@@ -10,7 +10,7 @@ from session import Session
 #     if languange == "it": 
 
 if __name__ == "__main__":
-    s1 = Session("John")
+    s1 = Session("John", 'db.csv')
     s1.play_all()
     print("Program End")
     
