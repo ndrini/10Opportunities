@@ -9,14 +9,10 @@ di queste tre azioni del vostro protagonista sceglieresti?"
 class Match():
     history = [0]  # pace list (or breadcrumb)
     parent_msg = "No message :-( "
-    childs = []  # list of records of children
-    # TODO: remove childs_page_number and user childs list
-    childs_page_number = []  # list of integers of page
-    childs_page_info = []   # list of str: number + msg
     actual_page_info = {}
 
     def __init__(self, initial_page, player, db) -> None:
-        ''' adquire info from Session obj '''
+        ''' get info from Session obj '''
         self.page = initial_page      # TODO rename initial_page
         self.player_name = player
         # with open(r"db.yaml") as f:
@@ -24,8 +20,7 @@ class Match():
         self.db = read_db(db)
 
     def involved_pages(self, actual_page_number) -> dict:
-        ''' return a dict with necessary info to
-            have a choice: 
+        ''' return a dict with necessary info to choice: 
             'actual_page': actual_page_obj,
             'childs': [children_page_objs] '''
         result = {'childs': []}
@@ -44,44 +39,6 @@ class Match():
                 if page["choice"] == True:
                     print("\n\n\n DB inconsistency: not only child!")
                 return page["page"]
-
-    def pseudo_query(self, page_number) -> list:
-        ''' Show actual situation and possible next steps 
-            TODO: split in 2 functions: 
-                - one that show the situation 
-                - one that show the future possibilities        
-        '''
-        # select the options child of page page_number
-
-        for page in self.db:
-            if page["page"] == page_number:
-                self.parent_msg = page["msg_pre"]   # msg_pre,msg_actual
-                if page["end"] == True:
-                    # reached the last page
-                    print(self.parent_msg)
-                    return ["End"]
-                # connected choice not shown !!!
-                if page["choice"] == False:
-                    return ["go_on"]
-
-            if page["parent"] == page_number:
-                self.childs.append(page)
-
-        self.childs_page_number = [p["page"] for p in self.childs]
-        ''' Show actual situation '''
-        print("Your situation: ", self.parent_msg)
-        ''' Show possible next steps '''
-
-        # TODO:  nice_display_function
-        self.childs_page_info = [str(p["page"]) + "  " + p["msg"]
-                                 for p in self.childs]
-        # prompt option
-        print(self.player_name, ", ", choice_generic_text)
-        print("Le scelte possibili sono ")
-        for m in self.childs_page_info:
-            print("\t", m)
-
-        return self.childs_page_number
 
     def read_and_pass_answer(self) -> int:
         ''' Return user valid selection, based on available choices 
